@@ -1,0 +1,42 @@
+export const interests = [
+  {
+    id: "cricket",
+    emoji: "🏏",
+    label: "Cricket",
+    line: "Can probably predict Kohli's next cover drive.",
+    funFact: "Has a strong, unsolicited opinion on every DRS review.",
+    accent: "pink",
+  },
+  {
+    id: "anime",
+    emoji: "🎌",
+    label: "Anime",
+    line: "\"One more episode\" has never meant just one.",
+    funFact: "Currently juggling three unfinished series, zero regrets.",
+    accent: "violet",
+  },
+  {
+    id: "sketching",
+    emoji: "✏️",
+    label: "Sketching",
+    line: "Half my notebooks are sketches pretending to be lecture notes.",
+    funFact: "Margins > actual notes, historically speaking.",
+    accent: "amber",
+  },
+  {
+    id: "swimming",
+    emoji: "🏊",
+    label: "Swimming",
+    line: "Debugging hits different after a few laps.",
+    funFact: "Best bug fixes happen mid-freestyle, oddly enough.",
+    accent: "blue",
+  },
+  {
+    id: "food",
+    emoji: "🍜",
+    label: "Foodie",
+    line: "Will travel surprisingly far for food that's \"worth it.\"",
+    funFact: "Keeps a mental map of every good stall within 10km.",
+    accent: "mint",
+  },
+];
