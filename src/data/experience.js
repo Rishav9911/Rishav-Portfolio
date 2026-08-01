@@ -14,7 +14,7 @@ export const experience = [
     // Swap this path for the real company logo whenever it's ready —
     // nothing else in the component needs to change.
     logo: "/assets/placeholders/hashedin.png",
-    story: "I build agents that read codebases the way a senior engineer would.",
+    story: "A place where curiosity became my biggest strength—I learned, adapted, and built across AI, backend, cloud, and frontend technologies.",
     stack: ["Python", "FastAPI", "LangGraph", "MCP", "Spark", "Kafka", "Angular"],
     metrics: [
       { value: "50%", label: "faster repo profiling" },
@@ -38,7 +38,7 @@ export const experience = [
     current: false,
     accent: "mint",
     logo: "/assets/placeholders/karkhana.png",
-    story: "I owned a 3D-printing cost estimator from prototype to payments.",
+    story: "Wore multiple hats every day, building full-stack features and learning what it takes to ship software in a startup.",
     stack: ["Next.js", "Node.js", "MongoDB", "WordPress"],
     metrics: [
       { value: "20%", label: "faster load times" },
@@ -60,7 +60,7 @@ export const experience = [
     current: false,
     accent: "amber",
     logo: "/assets/placeholders/spicejet.png",
-    story: "I automated how a flight-disruption system ingested schedule data.",
+    story: "Where I discovered that a few well-designed backend services can save hours of manual work.",
     stack: ["Java", "Spring Boot", "Hibernate", "MySQL"],
     metrics: [
       { value: "10+", label: "REST endpoints shipped" },
