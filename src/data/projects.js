@@ -23,7 +23,7 @@ export const projects = [
       { value: "100+", label: "pages handled" },
       { value: "0.22", label: "pages/sec, CPU-only" },
     ],
-    links: { github: "#", caseStudy: "#" },
+    links: { github: "https://github.com/Rishav9911/PDF-Extractify", caseStudy: "#" },
   },
   {
     id: "aplica-plus",
@@ -47,7 +47,7 @@ export const projects = [
       { value: "30+/wk", label: "applications automated" },
       { value: "60%", label: "less review time" },
     ],
-    links: { github: "#", caseStudy: "#" },
+    links: { github: "https://github.com/Rishav9911/Aplica", caseStudy: "#" },
   },
   {
     id: "medminion",
@@ -70,7 +70,7 @@ export const projects = [
       { value: "+26%", label: "diagnosis accuracy" },
       { value: "10+", label: "trial accounts tested" },
     ],
-    links: { github: "#", caseStudy: "#" },
+    links: { github: "https://github.com/Rishav9911/MedMinion", caseStudy: "#" },
   },
   {
     id: "iot-malware",
@@ -94,7 +94,7 @@ export const projects = [
       { value: "1M", label: "entries analyzed" },
       { value: "68.5%", label: "after fine-tuning" },
     ],
-    links: { github: "#", caseStudy: "#" },
+    links: { github: "https://github.com/Rishav9911/IoT-Malware-Detection-Models", caseStudy: "#" },
   },
 ];
 
