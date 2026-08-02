@@ -317,9 +317,7 @@ export default function Achievements() {
             <h2 className="font-display text-3xl sm:text-5xl font-medium leading-[1.05] tracking-tight text-ink">
               Wins, certs &amp;<br className="hidden sm:block" /> side quests.
             </h2>
-            <p className="mt-4 text-ink-dim leading-relaxed">
-              A running showcase, not a resume list — drag, swipe, or use the arrows.
-            </p>
+      
           </motion.div>
 
           <div className="flex items-center gap-3">
