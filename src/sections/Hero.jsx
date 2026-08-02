@@ -74,12 +74,12 @@ export default function Hero() {
           {profile.heroTagline}
         </motion.p>
 
-        <motion.p
+        {/* <motion.p
           variants={item}
           className="mt-6 max-w-xl text-lg text-ink-dim leading-relaxed"
         >
           {profile.tagline}
-        </motion.p>
+        </motion.p> */}
 
         <motion.div variants={item} className="mt-10 flex flex-wrap gap-3">
           <MagneticButton
