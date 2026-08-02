@@ -1,5 +1,11 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useRef, useState } from "react";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 import { TbChevronDown, TbBuildingSkyscraper, TbMapPin } from "react-icons/tb";
 import SectionHeading from "../components/SectionHeading";
 import GlassCard from "../components/GlassCard";
@@ -73,7 +79,21 @@ function ExperienceItem({ role, index, isLast }) {
           )}
           <span className={`relative h-1.5 w-1.5 rounded-full ${a.dot}`} />
         </span>
-        {!isLast && <span className="mt-1 w-px flex-1 bg-ink/10" />}
+        {/* Line always continues for the full height of this item — for
+            the last role that means it now runs all the way down through
+            the card's bottom padding (instead of stopping at the dot),
+            with a gentle taper at the very end rather than a hard cut. */}
+        <span
+          className="mt-1 w-px flex-1 bg-ink/10"
+          style={
+            isLast
+              ? {
+                  background:
+                    "linear-gradient(to bottom, rgb(var(--c-ink-rgb) / 0.1) 0%, rgb(var(--c-ink-rgb) / 0.1) 75%, transparent 100%)",
+                }
+              : undefined
+          }
+        />
       </div>
 
       {/* Card */}
@@ -186,7 +206,47 @@ function ExperienceItem({ role, index, isLast }) {
   );
 }
 
+// A small glowing "comet" that rides the timeline rail, its position tied
+// to how far the user has scrolled through the experience list. Position
+// is driven by Framer Motion's scroll progress (itself rAF-based) and
+// smoothed with a spring so it eases fluidly in both scroll directions
+// rather than snapping to the raw scroll value.
+function TimelineComet({ containerRef }) {
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start 0.7", "end 0.35"],
+  });
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 120,
+    damping: 26,
+    mass: 0.4,
+  });
+  const top = useTransform(smoothProgress, [0, 1], ["0%", "100%"]);
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.03, 0.97, 1],
+    [0, 1, 1, 0]
+  );
+
+  return (
+    <motion.div
+      aria-hidden="true"
+      className="pointer-events-none absolute left-2 z-10 -translate-x-1/2"
+      style={{ top, opacity }}
+    >
+      {/* shimmering trail: a soft fading streak behind the comet */}
+      <div className="absolute bottom-0 left-1/2 h-20 w-px -translate-x-1/2 bg-gradient-to-t from-aurora-mint/80 via-aurora-mint/25 to-transparent" />
+      {/* outer halo */}
+      <div className="absolute left-1/2 top-1/2 h-7 w-7 -translate-x-1/2 -translate-y-1/2 rounded-full bg-aurora-mint/30 blur-md" />
+      {/* bright core */}
+      <div className="absolute left-1/2 top-1/2 h-[7px] w-[7px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-aurora-mint shadow-[0_0_12px_3px_rgba(92,224,184,0.85)]" />
+    </motion.div>
+  );
+}
+
 export default function Experience() {
+  const timelineRef = useRef(null);
+
   return (
     <section id="experience" className="px-6 py-24">
       <div className="mx-auto max-w-5xl">
@@ -196,7 +256,8 @@ export default function Experience() {
           tone="mint"
         />
 
-        <div>
+        <div ref={timelineRef} className="relative">
+          <TimelineComet containerRef={timelineRef} />
           {experience.map((role, i) => (
             <ExperienceItem
               key={role.id}

@@ -5,7 +5,7 @@ import { skillGroups } from "../data/skills";
 
 export default function Skills() {
   return (
-    <section id="skills" className="px-6 py-24">
+    <section id="skills" className="px-6 py-24 sm:py-28">
       <div className="mx-auto max-w-5xl">
         <SectionHeading
           eyebrow="Toolbox"
@@ -13,10 +13,11 @@ export default function Skills() {
           tone="violet"
         />
 
-        <div className="grid gap-x-14 gap-y-24 sm:gap-x-20 sm:gap-y-28 lg:gap-x-24 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 justify-items-center gap-x-6 gap-y-20 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-24 lg:grid-cols-3 lg:gap-x-10 lg:gap-y-28">
           {skillGroups.map((group, gi) => (
             <motion.div
               key={group.id}
+              className="w-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -30,3 +31,4 @@ export default function Skills() {
     </section>
   );
 }
+

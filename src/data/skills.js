@@ -1,7 +1,7 @@
 export const skillGroups = [
   {
     id: "languages",
-    label: "Languages",
+    label: "Programming Languages",
     accent: "blue",
     skills: [
       { name: "Python", level: 92 },
@@ -20,17 +20,20 @@ export const skillGroups = [
     skills: [
       { name: "LangChain", level: 88 },
       { name: "LangGraph", level: 88 },
-      { name: "RAG pipelines", level: 85 },
+      { name: "RAG Pipelines", level: 85 },
       { name: "Agentic AI", level: 87 },
       { name: "NLP", level: 78 },
-      { name: "LLM applications", level: 85 },
+      { name: "LLM Applications", level: 85 },
     ],
   },
   {
-    id: "backend",
-    label: "Backend & Frameworks",
+    id: "software-dev",
+    label: "Software Development",
     accent: "violet",
     skills: [
+      { name: "React", level: 78 },
+      { name: "Angular", level: 74 },
+      { name: "HTML / CSS", level: 82 },
       { name: "FastAPI", level: 85 },
       { name: "Flask", level: 82 },
       { name: "Spring Boot", level: 80 },
@@ -39,31 +42,14 @@ export const skillGroups = [
     ],
   },
   {
-    id: "frontend",
-    label: "Frontend",
-    accent: "amber",
-    skills: [
-      { name: "React", level: 78 },
-      { name: "Angular", level: 74 },
-      { name: "HTML / CSS", level: 82 },
-    ],
-  },
-  {
-    id: "data",
-    label: "Data & Analytics",
+    id: "data-engineering",
+    label: "Data Engineering",
     accent: "mint",
     skills: [
       { name: "Apache Spark", level: 78 },
       { name: "Databricks", level: 76 },
       { name: "Pandas / NumPy", level: 85 },
       { name: "Matplotlib", level: 75 },
-    ],
-  },
-  {
-    id: "databases",
-    label: "Databases",
-    accent: "blue",
-    skills: [
       { name: "MySQL", level: 82 },
       { name: "MongoDB", level: 80 },
       { name: "SQLite", level: 78 },
@@ -71,25 +57,26 @@ export const skillGroups = [
     ],
   },
   {
-    id: "tools",
-    label: "Developer Tools & Cloud",
-    accent: "mint",
+    id: "dev-tools",
+    label: "Developer Tools & Platforms",
+    accent: "amber",
     skills: [
       { name: "Docker", level: 80 },
       { name: "Kafka", level: 78 },
       { name: "Git / GitHub", level: 90 },
+      { name: "WordPress", level: 70 },
       { name: "Postman", level: 85 },
     ],
   },
   {
     id: "practices",
     label: "Software Engineering",
-    accent: "violet",
+    accent: "blue",
     skills: [
       { name: "Data Structures & Algorithms", level: 88 },
+      { name: "OOP Design", level: 84 },
       { name: "Unit Testing / TDD", level: 78 },
-      { name: "Agile development", level: 80 },
-      { name: "OOP design", level: 84 },
+      { name: "Agile Development", level: 80 },
     ],
   },
 ];

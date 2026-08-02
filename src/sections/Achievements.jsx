@@ -314,7 +314,7 @@ export default function Achievements() {
             className="max-w-lg"
           >
             <p className="eyebrow mb-3 text-aurora-violet">Recognition</p>
-            <h2 className="font-display text-4xl sm:text-6xl font-semibold leading-[1.05] tracking-tight text-ink">
+            <h2 className="font-display text-3xl sm:text-5xl font-medium leading-[1.05] tracking-tight text-ink">
               Wins, certs &amp;<br className="hidden sm:block" /> side quests.
             </h2>
             <p className="mt-4 text-ink-dim leading-relaxed">
