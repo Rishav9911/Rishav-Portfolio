@@ -26,7 +26,7 @@ export const profile = {
       { label: "Backend engineering", detail: "APIs, event-driven systems, data pipelines" },
       { label: "Problem solving", detail: "450+ DSA problems, competitive hackathons" },
     ],
-    philosophy: "But what if i fall ? oh my darling, what if you fly ?",
+    philosophy: "But what if i fall ? oh my darling, but what if you fly ?",
     funFacts: [
       {
         emoji: "🍜",
