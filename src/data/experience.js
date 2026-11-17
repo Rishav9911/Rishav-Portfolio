@@ -54,7 +54,7 @@ export const experience = [
   {
     id: "spicejet",
     company: "SpiceJet Limited",
-    role: "Technical Intern",
+    role: "Software Development Engineer Intern",
     location: "Gurugram, India",
     duration: "Jun — Aug 2024",
     current: false,
