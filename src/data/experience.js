@@ -6,7 +6,7 @@ export const experience = [
   {
     id: "hashedin",
     company: "HashedIn by Deloitte",
-    role: "SDE Intern",
+    role: "Software Engineer",
     location: "Bangalore, India",
     duration: "Apr 2026 — Present",
     current: true,
